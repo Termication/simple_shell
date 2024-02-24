@@ -19,3 +19,16 @@
 #define READABLE_BUF_SIZE 512
 
 
+/**
+ * struct builtin_cmd - Defines a structure representing
+ * a built-in command
+ * and its associated functionality.
+ * @cmd: The built-in command.
+ * @func_ptr: A pointer to a function that implements
+ * the command's functionality.
+ */
+typedef struct builtin_cmd
+{
+	char *cmd;
+	int (*func_ptr)(char **args, int status);
+} builtin_cmd;
