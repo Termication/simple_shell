@@ -1,4 +1,4 @@
-#include "shell_main.h"
+#include "main.h"
 
 /**
  * dis_prompt - Prints the shell prompt to standard output.

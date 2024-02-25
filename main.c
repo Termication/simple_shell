@@ -1,4 +1,4 @@
-#include "shell_main.h"	/* Include the shell header file */
+#include "main.h"
 
 /**
  * main - Entry point of the program
@@ -14,10 +14,8 @@ int main(void)
 	{
 		/* Print shell prompt */
 		dis_prompt();
-
-		/* Read command from user */
-		fgets(cmd, sizeof(cmd), stdin);
-		/* Here you would execute the command entered by the user */
+		get_user_input(cmd, sizeof(cmd));
+		cmd_execute(cmd);
 	}
 
 	return (0);

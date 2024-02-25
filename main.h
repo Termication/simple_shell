@@ -1,5 +1,5 @@
-#ifndef _SHELL_MAIN_H_
-#define _SHELL_MAIN_H_
+#ifndef _MAIN_H_
+#define _MAIN_H_
 
 #include <stdlib.h>
 #include <unistd.h>
@@ -45,6 +45,10 @@ char *_strstr(char *haystack, char *needle);
 void dis_prompt(void);
 void print_message(const char *dispatch);
 
+/*basic execute*/
+void cmd_execute(const char *cmd);
+void get_user_input(char *cmd, size_t size);
+
 /**
  * struct builtin_cmd - Defines a structure representing
  * a built-in command
@@ -58,3 +62,5 @@ typedef struct builtin_cmd
 	char *cmd;
 	int (*func_ptr)(char **args, int status);
 } builtin_cmd;
+
+#endif /*HEADER_H*/
