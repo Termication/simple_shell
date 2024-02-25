@@ -40,6 +40,11 @@ unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 
+/*Pro*/
+
+void dis_prompt(void);
+void print_message(const char *dispatch);
+
 /**
  * struct builtin_cmd - Defines a structure representing
  * a built-in command
