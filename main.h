@@ -40,10 +40,14 @@ unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 
-/*Pro*/
+/*Data Reading family*/
 
 void dis_prompt(void);
 void print_message(const char *dispatch);
+void remove_text_after_hashtag(char *input_string);
+char *remove_whitespace_prefix(char *input_string);
+char *handle_newline_character(char *input);
+char *read_user_input();
 
 /*basic execute*/
 void cmd_execute(const char *cmd);
