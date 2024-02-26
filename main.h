@@ -51,6 +51,7 @@ char *read_user_input();
 
 /*basic execute*/
 void cmd_execute(const char *cmd);
+void handle_error(const char *error_message);
 void get_user_input(char *cmd, size_t size);
 
 /**
