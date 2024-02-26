@@ -24,8 +24,6 @@ unsigned int is_delimiter(char c, const char *delimiters)
 	return (delimiter_bitset[(unsigned char)c]);
 }
 
-#include "header.h"
-
 /**
  * read_user_input - Reads input from the standard input provided by the user.
  * Return: The input stored in a buffer.

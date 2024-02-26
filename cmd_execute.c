@@ -17,13 +17,13 @@ void cmd_execute(const char *cmd)
 
 	if (child == -1)
 	{
-		perror("fork");
+		handle_error("Failed to fork a new process");
 		exit(EXIT_FAILURE);
 	}
 	else if (child == 0)
 	{
 		execlp(cmd, cmd, (char *)NULL);
-		perror("execlp");
+		handle_error("Failed to fork a new process");
 		exit(EXIT_FAILURE);
 	}
 	else
