@@ -1,4 +1,5 @@
 #include "main.h"
+#define MAX_ARGS 11
 
 /**
  * main - Entry point of the program
@@ -18,12 +19,14 @@ int main(void)
 		dis_prompt();
 		get_user_input(cmd, sizeof(cmd));
 		cmd_execute(cmd);
-	
+
+		num_args = tokenize_command(cmd, args);
+		for (int i = 0; i < num_args; i++)
+		{
+			
+			cmd_execute(args[i]);
+		}
 	}
-
-	num_args = tokenize_command(command_line, args);
-
-
 
 	return (0);
 }

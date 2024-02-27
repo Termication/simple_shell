@@ -54,6 +54,10 @@ void cmd_execute(const char *cmd);
 void handle_error(const char *error_message);
 void get_user_input(char *cmd, size_t size);
 
+/*handling family*/
+
+int tokenize_command(char *command_line, char **args);
+
 /**
  * struct builtin_cmd - Defines a structure representing
  * a built-in command
