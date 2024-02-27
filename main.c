@@ -11,6 +11,7 @@ int main(void)
 	char cmd[100];	/* Buffer to store user input */
 	char *args[MAX_ARGS];
 	int num_args;
+	int i;
 
 	/* Infinite loop to continuously prompt for input */
 	while (1)
@@ -21,7 +22,7 @@ int main(void)
 		cmd_execute(cmd);
 
 		num_args = tokenize_command(cmd, args);
-		for (int i = 0; i < num_args; i++)
+		for (i = 0; i < num_args && args[i] != NULL; i++)
 		{
 			
 			cmd_execute(args[i]);
