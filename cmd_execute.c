@@ -33,10 +33,20 @@ void cmd_execute(const char *cmd)
 				exit(EXIT_FAILURE);
 			}
 			else if (child == 0)
-			{
-				execve(command_with_path, (char *[]){cmd, NULL}, NULL);
-				perror("Failed to execute command")
-					_exit(EXIT_FAILURE);
+			{	
+				char *cmd_copy = strdup(cmd);
+
+				if (cmd_copy == NULL)
+				{
+					perror("Failed to duplicate command");
+					exit(EXIT_FAILURE);
+				}
+
+				char *args[] = {cmd_copy, NULL};
+
+				execve(command_with_path, args, NULL);
+				perror("Failed to execute command");
+				_exit(EXIT_FAILURE);
 			}
 			else
 			{
