@@ -9,21 +9,18 @@
  * Return: none
  */
 
-void handle_builtin_commands(char **args)
+int handle_builtin_commands(char **args)
 {
 	if (strcmp(args[0], "exit") == 0)
 	{
-		exit(EXIT_SUCCESS);
+		return (1);
 	}
 	else if (strcmp(args[0], "cd") == 0)
 	{
-		if (chdir(args[1]) != 0)
-		{
-			perror("simple_shell");
-		}
+		return (1);
 	}
 	else
 	{
-		return;
+		return (0);
 	}
 }

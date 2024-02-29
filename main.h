@@ -20,7 +20,7 @@
 char *read_line(void);
 char **split_line(char *line);
 int execute(char **args);
-void handle_builtin_commands(char **args);
+int handle_builtin_commands(char **args);
 char *find_command_in_path(char *command);
 void handle_exit(void);
 void execute_command(char **args);
@@ -28,6 +28,9 @@ void handle_builtin(char **args);
 char *read_input_line(void);
 void print_prompt(const char *prompt);
 void handle_env(void);
+int execute_if_command_exists(char **args);
+ssize_t my_getline(char **lineptr, size_t *n, int fd);
+
 /**
  * struct builtin_cmd - Defines a structure representing
  * a built-in command
