@@ -30,6 +30,7 @@ void print_prompt(const char *prompt);
 void handle_env(void);
 int execute_if_command_exists(char **args);
 ssize_t my_getline(char **lineptr, size_t *n, int fd);
+char **create_exec_args(char *command_path);
 
 /**
  * struct builtin_cmd - Defines a structure representing
