@@ -14,8 +14,11 @@
 #include <errno.h>
 #include <signal.h>
 
-#define BUFSIZE 1024
-#define DELIMS " \t\r\n\a"
+#define BUF_SIZE 4092
+#define DELIMITER " \t\r\n\a"
+#define PRINT_THIS(c) (write(STDERR_FILENO, c, _strlen(c)))
+
+
 
 char *read_line(void);
 char **split_line(char *line);
