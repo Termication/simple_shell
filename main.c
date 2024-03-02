@@ -21,7 +21,7 @@ int main(char **args)
 		input = custom_getline();
 		if (input[0] == '\0')
 			continue;
-		history(input);
+		past_arg(input);
 		commands = split(input);
 		for (i = 0; commands[i] != NULL; i++)
 		{
