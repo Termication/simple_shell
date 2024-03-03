@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * custom_getline - Reads a line from standard input
  *
@@ -42,4 +43,3 @@ char *custom_getline()
 	hash_attack(line);
 	return (line);
 }
-

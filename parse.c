@@ -23,7 +23,7 @@ char **parse(char *user_input)
 		perror("hsh");
 		return (NULL);
 	}
-	arg = _strtok(user_input, "\n\t\r\a ");
+	arg = tokenize(user_input, "\n\t\r\a ");
 	for (index = 0; arg; index++)
 	{
 		args_list[index] = arg;

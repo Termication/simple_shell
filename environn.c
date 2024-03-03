@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * switch_directory - Changes directory
  * @cmd: command

@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * signal_handler - Handles signals, specifically SIGINT
  * @signal: The signal to handle
