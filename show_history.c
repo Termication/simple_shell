@@ -15,12 +15,12 @@ int echo_built_in(char **arguments, int status)
 
 	if (_strncmp(arguments[1], "$?", 2) == 0)
 	{
-		print_integer(status);
+		print_number_int(status);
 		PRINT_THIS("\n");
 	}
 	else if (_strncmp(arguments[1], "$$", 2) == 0)
 	{
-		print_number(parent_pid);
+		print_digit(parent_pid);
 		PRINT_THIS("\n");
 	}
 	else if (_strncmp(arguments[1], "$PATH", 5) == 0)

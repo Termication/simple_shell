@@ -26,7 +26,7 @@ int command_c(char **command, char *user_input, int count, char **arguments)
 	if (child_pid == 0)
 	{
 		if (_strncmp(*command, "./", 2) != 0 && _strncmp(*command, "/", 1) != 0)
-			path_cmd(command);
+			path_command(command);
 
 		if (access(command[0], R_OK) != 0)
 		{
