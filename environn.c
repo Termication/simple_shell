@@ -51,3 +51,5 @@ int dis_environment(__attribute__((unused)) char **cmd, __attribute__((unused)) 
 		write(STDOUT_FILENO, "\n", 1);
 	}
 	return (0);
+
+}

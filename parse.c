@@ -27,7 +27,7 @@ char **parse(char *user_input)
 	for (index = 0; arg; index++)
 	{
 		args_list[index] = arg;
-		arg = _strtok(NULL, "\n\t\r\a ");
+		arg = tokenize(NULL, "\n\t\r\a ");
 	}
 	args_list[index] = NULL;
 
