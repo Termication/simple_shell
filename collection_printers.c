@@ -15,7 +15,7 @@ void print_digit(int number)
 		temp = -temp;
 	}
 	if ((temp / 10) > 0)
-		print_number(temp / 10);
+		dis_num(temp / 10);
 
 	_putchar(temp % 10 + '0');
 }
@@ -66,7 +66,7 @@ void dis_num(unsigned int number)
 	unsigned int temp = number;
 
 	if ((temp / 10) > 0)
-		print_number(temp / 10);
+		dis_num(temp / 10);
 
 	_putchar(temp % 10 + '0');
 }

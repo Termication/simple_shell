@@ -38,7 +38,7 @@ int path_command(char **command);
 char *fetch_env(char *var_name);
 char *create_path(char *file_token, char *file_value);
 char *fetch_env(char *var_name);
-void an_array(void *a, int el, unsigned int len);
+void *an_array(void *a, int el, unsigned int len);
 void closing_built(char **commands, char *input_line, FILE *file_descriptor);
 void scan_file(char *file_name, char **arguments);
 void file_exa(char *file_line, int line_count,

@@ -86,7 +86,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
  *
  * Return: Pointer to the filled memory area.
  */
-void an_array(void *a, int el, unsigned int len)
+void *an_array(void *a, int el, unsigned int len)
 {
 	char *p = a;
 	unsigned int i = 0;

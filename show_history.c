@@ -15,7 +15,7 @@ int echo_built_in(char **arguments, int status)
 
 	if (_strncmp(arguments[1], "$?", 2) == 0)
 	{
-		print_number_int(status);
+		print_digit(status);
 		PRINT_THIS("\n");
 	}
 	else if (_strncmp(arguments[1], "$$", 2) == 0)
@@ -31,7 +31,7 @@ int echo_built_in(char **arguments, int status)
 		free(env_path);
 	}
 	else
-		return (print_custom_echo(arguments));
+		return (echoing(arguments));
 
 	return (1);
 }
