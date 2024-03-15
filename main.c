@@ -5,19 +5,20 @@
  * @args: Command-line arguments
  * Return: Exit status of the program
  */
-int main(char **args)
+int main(int argc, char **args)
 {
+	void(argc);
 	char *input, **cmd, **commands;
 	int cmd_count = 0, i, status = 0;
 
 	if (args[1] != NULL)
-		read_file(args[1], args);
+		scan_file(args[1], args);
 	signal(SIGINT, signal_handler);
 	while (true)
 	{
 		cmd_count++;
 		if (isatty(STDIN_FILENO))
-			prompt();
+			dis_prompt();
 		input = custom_getline();
 		if (input[0] == '\0')
 			continue;
@@ -30,7 +31,7 @@ int main(char **args)
 			{
 				free(commands);
 				exit_bul(cmd, input, args, cmd_count, status);
-
+			}
 			else if (check_builtin(cmd) == 0)
 			{
 				status = handle_builtin(cmd, status);

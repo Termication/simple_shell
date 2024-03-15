@@ -17,6 +17,7 @@
 
 #define BUF_SIZE 4092
 #define DELIMITER " \t\r\n\a"
+#define UNUSED __attribute__((unused))
 #define PRINT_THIS(c) (write(STDERR_FILENO, c, _strlen(c)))
 char **parse(char *user_input);
 void dis_prompt(void);
