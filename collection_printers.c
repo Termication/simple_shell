@@ -55,8 +55,6 @@ int echoing(char **arguments)
 	}
 	return (1);
 }
-
-code
 /**
  * dis_num - Prints an unsigned integer recursively
  * @number: The unsigned integer to print

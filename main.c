@@ -5,9 +5,8 @@
  * @args: Command-line arguments
  * Return: Exit status of the program
  */
-int main(int argc, char **args)
+int main(UNUSED int argc, char **args)
 {
-	void(argc);
 	char *input, **cmd, **commands;
 	int cmd_count = 0, i, status = 0;
 

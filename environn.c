@@ -5,7 +5,7 @@
  * @st: command executed
  * Return: 0 on success 1
  */
-int switch_directory(char **cmd, __attribute__((unused))int str)
+int switch_directory(char **cmd, UNUSED int str)
 {
 	int value = -1;
 	char cwd[PATH_MAX];

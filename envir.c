@@ -6,7 +6,8 @@
  */
 void create_envi(char **envi)
 {
-	for (int i = 0; environ[i]; i++)
+	int i;
+	for (i = 0; environ[i]; i++)
 	envi[i] = _strdup(environ[i]);
 	envi[i] = NULL;
 }
@@ -17,7 +18,8 @@ void create_envi(char **envi)
  */
 void free_env(char **env)
 {
-	for (int i = 0; env[i]; i++)
+	int i;
+	for (i = 0; env[i]; i++)
 	free(env[i]);
 }
 

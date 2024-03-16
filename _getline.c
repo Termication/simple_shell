@@ -26,7 +26,7 @@ char *custom_getline()
 		}
 		buff[index] = ch;
 		if (buff[0] == '\n')
-			return (enter(buff));
+			return (_entereturn(buff));
 		if (index >= size)
 		{
 			buff = realloc(buff, (size + 2));

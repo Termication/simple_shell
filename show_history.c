@@ -25,7 +25,7 @@ int echo_built_in(char **arguments, int status)
 	}
 	else if (_strncmp(arguments[1], "$PATH", 5) == 0)
 	{
-		env_path = _getenv("PATH");
+		env_path = fetch_env("PATH");
 		PRINT_THIS(env_path);
 		PRINT_THIS("\n");
 		free(env_path);
@@ -45,8 +45,7 @@ int echo_built_in(char **arguments, int status)
  *
  * Return: 0 on success, -1 on failure.
  */
-int show_history(__attribute__((unused)) char **command,
-		__attribute__((unused)) int status)
+int show_history(UNUSED char **command,UNUSED int status)
 {
 	char *filename = ".hty";
 	FILE *file_ptr;

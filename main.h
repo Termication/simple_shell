@@ -49,7 +49,7 @@ void print_error(char *user_input, int loop_count, char **program_args);
 void _prerror(char **program_args, int error_count, char **command);
 void create_envi(char **envi);
 void free_env(char **env);
-int show_history(__attribute__((unused)) char **command, __attribute__((unused)) int status);
+int show_history(UNUSED char **command, UNUSED int status);
 int echo_built_in(char **arguments, int status);
 int dis_environment(__attribute__((unused)) char **cmd, __attribute__((unused)) int st);
 int switch_directory(char **cmd, __attribute__((unused))int str);
@@ -68,6 +68,8 @@ char *_strcpy(char *dest, char *src);
 char *_strchr(char *s, char c);
 int _strncmp(const char *s1, const char *s2, size_t n);
 char *_strdup(char *str);
+char *_strchr(char *s, char c);
+
 
 void free_env(char **env);
 void *fill_an_array(void *a, int el, unsigned int len);

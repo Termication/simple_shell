@@ -50,13 +50,13 @@ void scan_file(char *file_name, char **arguments)
 	file_ptr = fopen(file_name, "r");
 	if (file_ptr == NULL)
 	{
-		handle_file_error(arguments, counter);
+		error_file(arguments, counter);
 		exit(127);
 	}
 	while ((getline(&line, &line_length, file_ptr)) != -1)
 	{
 		counter++;
-		process_file_line(line, counter, file_ptr, arguments);
+		file_exa(line, counter, file_ptr, arguments);
 	}
 	if (line)
 		free(line);
@@ -90,7 +90,7 @@ void file_exa(char *file_line, int line_count,
 	}
 	else
 	{
-		status = check_command(command, file_line, line_count, arguments);
+		status = command_c(command, file_line, line_count, arguments);
 		free(command);
 	}
 }
