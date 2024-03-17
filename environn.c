@@ -2,7 +2,7 @@
 /**
  * switch_directory - Changes directory
  * @cmd: command
- * @st: command executed
+ * @str: command executed
  * Return: 0 on success 1
  */
 int switch_directory(char **cmd, UNUSED int str)
@@ -39,7 +39,7 @@ int switch_directory(char **cmd, UNUSED int str)
  * @st: command executed
  * Return: 0
  */
-int dis_environment(__attribute__((unused)) char **cmd, __attribute__((unused)) int st)
+int dis_environment(UNUSED char **cmd, UNUSED int st)
 {
 	size_t i;
 	int len;

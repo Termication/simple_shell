@@ -15,34 +15,28 @@ int command_c(char **command, char *user_input, int count, char **arguments)
 
 	if (*command == NULL)
 		return (EXIT_FAILURE);
-
 	child_pid = fork();
 	if (child_pid == -1)
 	{
 		perror("Error");
 		return (-1);
 	}
-
 	if (child_pid == 0)
 	{
 		if (_strncmp(*command, "./", 2) != 0 && _strncmp(*command, "/", 1) != 0)
 			path_command(command);
-
 		if (access(command[0], R_OK) != 0)
 		{
 			print_error(command[0], count, arguments);
 			free_all(command, user_input);
 			exit(127);
 		}
-
 		if (execve(*command, command, environ) == -1)
 			return (2);
 		else
 			return (0);
 	}
-
 	wait(&status);
-
 	if (WIFEXITED(status))
 	{
 		if (WEXITSTATUS(status) == 0)
@@ -52,6 +46,5 @@ int command_c(char **command, char *user_input, int count, char **arguments)
 		else if (WEXITSTATUS(status) == 127)
 			return (127);
 	}
-
 	return (127);
 }

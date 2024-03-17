@@ -22,7 +22,7 @@
 char **parse(char *user_input);
 void dis_prompt(void);
 int command_c(char **command, char *user_input, int count, char **arguments);
-void signal_handler(int signal) ;
+void signal_handler(int signal);
 char *custom_getline();
 char *_entereturn(char *st);
 char *space(char *string);
@@ -43,7 +43,7 @@ void *an_array(void *a, int el, unsigned int len);
 void closing_built(char **commands, char *input_line, FILE *file_descriptor);
 void scan_file(char *file_name, char **arguments);
 void file_exa(char *file_line, int line_count,
-                FILE *file_ptr, char **arguments);
+FILE *file_ptr, char **arguments);
 void error_file(char **program_args, int error_count);
 void print_error(char *user_input, int loop_count, char **program_args);
 void _prerror(char **program_args, int error_count, char **command);
@@ -69,8 +69,6 @@ char *_strchr(char *s, char c);
 int _strncmp(const char *s1, const char *s2, size_t n);
 char *_strdup(char *str);
 char *_strchr(char *s, char c);
-
-
 void free_env(char **env);
 void *fill_an_array(void *a, int el, unsigned int len);
 char *_memcpy(char *dest, char *src, unsigned int n);
@@ -99,13 +97,12 @@ int check_builtin(char **cmd);
 int handle_builtin(char **cmd, int st);
 void exit_bul(char **cmd, char *input, char **argv, int c, int stat);
 
-
 /**
- * struct builtin_cmd - Defines a structure representing
- * a built-in command
+ * struct _builtin - struct representing
+ * a builtin command
  * and its associated functionality.
- * @cmd: The built-in command.
- * @func_ptr: A pointer to a function that implements
+ * @command: The built-in char for command.
+ * @function: A pointer to a function that implements
  * the command's functionality.
  */
 typedef struct _builtin

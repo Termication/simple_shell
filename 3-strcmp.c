@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strcmp - Compares two strings
+ * _strncmp - Compares two strings
  * @s1: First string
  * @s2: Second string
  * @n: amount of characters to compare

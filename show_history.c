@@ -7,6 +7,7 @@
  *
  * Processes special cases for echo command. Returns 1 if handled,
  * otherwise prints custom echo and returns 0.
+ * Return: 0
  */
 int echo_built_in(char **arguments, int status)
 {
@@ -45,7 +46,7 @@ int echo_built_in(char **arguments, int status)
  *
  * Return: 0 on success, -1 on failure.
  */
-int show_history(UNUSED char **command,UNUSED int status)
+int show_history(UNUSED char **command, UNUSED int status)
 {
 	char *filename = ".hty";
 	FILE *file_ptr;

@@ -30,14 +30,14 @@ void closing_built(char **commands, char *input_line, FILE *file_descriptor)
 	fclose(file_descriptor);
 	exit(exit_status);
 }
-/*
+/**
  * scan_file - Reads lines from a file and
  * processes them using the provided arguments.
  * If the file cannot be opened, it
  * handles the error and exits with status 127.
  *
- * file_name: The name of the file to read.
- * arguments: The arguments to be
+ * @file_name: The name of the file to read.
+ * @arguments: The arguments to be
  * passed for processing each line.
  */
 void scan_file(char *file_name, char **arguments)

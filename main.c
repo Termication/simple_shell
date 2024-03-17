@@ -2,6 +2,7 @@
 
 /**
  * main - Entry point of the program
+ * @argc: First argument UNUSED
  * @args: Command-line arguments
  * Return: Exit status of the program
  */
